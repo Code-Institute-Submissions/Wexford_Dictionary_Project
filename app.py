@@ -16,9 +16,9 @@ mongo = PyMongo(app)
 def hello ():
     return render_template("slangs.html", slangs=mongo.db.slangs.find())
 
-@app.route('/add_slang')
+@app.route('/addslang')
 def add_slang():
-        return render_template("addslangwords.html")
+        return render_template("addslangwords.html", categories=mongo.db.categories.find())
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
