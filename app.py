@@ -26,6 +26,13 @@ def insertslang():
     slang.insert_one(request.form.to_dict())
     return redirect(url_for('getslang'))
 
+@app.route('/editslang/<slangid>')
+def editslang(slangid):
+    _slang = mongo.db.slangs.find_one({"_id": ObjectId(slangid)})
+    _categories = mongo.db.categories.find()
+    category_list = [category for category in _categories]
+    return render_template("editslangwords.html", slang=_slang, categories= category_list)
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
         port=(os.environ.get("PORT")),

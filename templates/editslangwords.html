@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<h3>Add Slang</h3>
+<h3>Edit Slang</h3>
   <div class="row">
     <form action="{{url_for('insertslang')}}" method="POST" class="col s12">
        <div class="input-field col s2">
@@ -8,7 +8,11 @@
     <select id="category" name="category_name">
       <option value="" disabled selected>Category</option>
       {% for cat in categories %}
-      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+      {% if cat.category_name == slang.category_name %}
+      <option value="{{cat.category_name}}" selected >{{cat.category_name}}</option>
+       {% else %}
+         <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+       {% endif %}
       {% endfor %}
     </select>
     <label>Category</label>
@@ -40,7 +44,7 @@
           <label for="email">Added Date</label>
         </div>
       </div>
-<button class="btn waves-effect waves-light" type="submit" name="action">Add Slang
+<button class="btn waves-effect waves-light" type="submit" name="action">Update Slang
     <i class="material-icons right">send</i>
   </button>
 
