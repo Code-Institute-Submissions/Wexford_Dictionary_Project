@@ -19,29 +19,22 @@
   </div>
         <div class="input-field col s4">
         <i class="material-icons prefix">help</i>
-          <input id="last_name" name="slang_name" type="text" class="validate">
+          <input id="last_name" name="slang_name" type="text" class="validate" value="{{slang.slang_name}}">
           <label for="last_name">Slang Word</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
         <i class="material-icons prefix">mode_edit</i>
-            <textarea id="textarea2" name="slang_description" class="materialize-textarea" data-length="120"></textarea>
+            <textarea id="textarea2" name="slang_description" class="materialize-textarea" data-length="120">{{slang.slang_description}}</textarea>
             <label for="textarea2">Slang Description</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
         <i class="material-icons prefix">mode_edit</i>
-            <textarea id="textarea2" name="slang_example"class="materialize-textarea" data-length="120"></textarea>
+            <textarea id="textarea2" name="slang_example"class="materialize-textarea" data-length="120">{{slang.slang_example}}</textarea>
             <label for="textarea2">Slang Example</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s2">
-         <i class="material-icons prefix">today</i>
-          <input id="email" name="added_date" type="date" class="validate">
-          <label for="email">Added Date</label>
         </div>
       </div>
 <button class="btn waves-effect waves-light" type="submit" name="action">Update Slang
@@ -49,6 +42,10 @@
   </button>
 
  </form>
+</div>
 
-    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript">
+
+</script>
 {% endblock %}
