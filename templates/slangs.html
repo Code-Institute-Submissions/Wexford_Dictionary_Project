@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for slangs in slangs %}
+    {{slangs.category_name}}
+    {{slangs.slang_name}}
+    {{slangs.slang_description}}
+    {{slangs.slang_example}}
+    {{slangs.added_date}}
+    {% endfor %}    
+</body>
+</html>
