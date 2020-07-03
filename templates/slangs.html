@@ -5,7 +5,15 @@
 <ul class="collapsible">
     {% for slangs in slangs %}
     <li>
-      <div class="collapsible-header"><i class="material-icons">expand_more</i>{{slangs.slang_name}}</div>
+      <div class="collapsible-header">
+         <div class="col s3"> 
+            <i class="material-icons">expand_more</i>
+            <a class="waves-effect waves-light red btn-small btn_xsml">Delete</a>
+            <a class="waves-effect waves-light blue btn-small btn_xsml">Edit</a>
+      </div>
+       <div class="accordion col s9">
+        <strong>{{slangs.slang_name}}</div></strong>
+       </div> 
       <div class="collapsible-body">
       <div>{{slangs.slang_description}}</div>
       <div><em>{{slangs.slang_example}}</em></div>
