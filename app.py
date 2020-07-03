@@ -16,6 +16,10 @@ mongo = PyMongo(app)
 def hello ():
     return render_template("slangs.html", slangs=mongo.db.slangs.find())
 
+@app.route('/add_slang')
+def add_slang():
+        return render_template("addslangwords.html")
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
         port=(os.environ.get("PORT")),
