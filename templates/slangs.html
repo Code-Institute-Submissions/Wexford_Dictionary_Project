@@ -1,12 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    {% for slangs in slangs %}
+    {% for slangs in items %}
     {{slangs.category_name}}
     {{slangs.slang_name}}
     {{slangs.slang_description}}
     {{slangs.slang_example}}
     {{slangs.added_date}}
-    {% endfor %}    
+    {% endfor %}
 
+<ul class="collapsible">
+    {% for slangs in slangs %}
+    <li>
+      <div class="collapsible-header"><i class="material-icons">expand_more</i>{{slangs.slang_name}}</div>
+      <div class="collapsible-body">
+      <div>{{slangs.slang_description}}</div>
+      <div><em>{{slangs.slang_example}}</em></div>
+      <div><small>{{slangs.added_date}}</small></div>
+      </div>
+    </li>
+     {% endfor %}
+  </ul>
 {% endblock %}
