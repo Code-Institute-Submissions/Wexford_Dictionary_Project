@@ -12,13 +12,19 @@ app.config["MONGO_URI"] = "mongodb+srv://johnmurphy:Admin12345@wexforddictionary
 mongo = PyMongo(app)
 
 @app.route('/')
-@app.route('/get_slangs')
-def hello ():
+@app.route('/getslangs')
+def getslang ():
     return render_template("slangs.html", slangs=mongo.db.slangs.find())
 
-@app.route('/addslang')
+@app.route('/addslangs')
 def add_slang():
         return render_template("addslangwords.html", categories=mongo.db.categories.find())
+
+@app.route('/insertslang', methods=['POST'])
+def insertslang():
+    slang = mongo.db.slangs
+    slang.insert_one(request.form.to_dict())
+    return redirect(url_for('getslang'))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
