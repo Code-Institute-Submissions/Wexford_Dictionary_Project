@@ -2,7 +2,7 @@
 
 <h3>Edit Slang</h3>
   <div class="row">
-    <form action="{{url_for('insertslang')}}" method="POST" class="col s12">
+    <form action="{{ url_for('updateslang', slangid=slang._id) }}" method="POST" class="col s12">
        <div class="input-field col s2">
         <i class="material-icons prefix">category</i>
     <select id="category" name="category_name">

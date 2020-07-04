@@ -28,10 +28,24 @@ def insertslang():
 
 @app.route('/editslang/<slangid>')
 def editslang(slangid):
-    _slang = mongo.db.slangs.find_one({"_id": ObjectId(slangid)})
-    _categories = mongo.db.categories.find()
-    category_list = [category for category in _categories]
-    return render_template("editslangwords.html", slang=_slang, categories= category_list)
+    slang = mongo.db.slangs.find_one({"_id": ObjectId(slangid)})
+    categories = mongo.db.categories.find()
+    category_list = [category for category in categories]
+    return render_template("editslangwords.html", slang=slang, categories= category_list)
+
+@app.route('/updateslang/<slangid>', methods=['POST'])
+def updateslang(slangid):
+    slang = mongo.db.slangs
+    slang.update( {'_id': ObjectId(slangid)},
+    {
+        'category_name':request.form.get('category_name'),
+        'slang_name':request.form.get('slang_name'),
+        'slang_description':request.form.get('slang_description'),
+        'slang_example':request.form.get('slang_example'),
+    })
+    return redirect(url_for('getslang'))
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
