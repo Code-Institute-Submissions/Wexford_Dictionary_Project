@@ -47,6 +47,12 @@ def updateslang(slangid):
 
 
 
+@app.route('/deleteslang/<slangid>')
+def deleteslang(slangid):
+    mongo.db.slangs.remove({'_id': ObjectId(slangid)})
+    return redirect(url_for('getslang'))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
         port=(os.environ.get("PORT")),
