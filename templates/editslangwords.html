@@ -3,7 +3,7 @@
 <h3>Edit Slang</h3>
   <div class="row">
     <form action="{{ url_for('updateslang', slangid=slang._id) }}" method="POST" class="col s12">
-       <div class="input-field col s2">
+       <div class="input-field col s6">
         <i class="material-icons prefix">category</i>
     <select id="category" name="category_name">
       <option value="" disabled selected>Category</option>
@@ -17,7 +17,7 @@
     </select>
     <label>Category</label>
   </div>
-        <div class="input-field col s4">
+        <div class="input-field col s6">
         <i class="material-icons prefix">help</i>
           <input id="last_name" name="slang_name" type="text" class="validate" value="{{slang.slang_name}}">
           <label for="last_name">Slang Word</label>
