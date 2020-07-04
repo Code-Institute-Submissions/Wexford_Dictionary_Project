@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="nav-wrapper purple">
+      <a href="#!" class="brand-logo center purple">Wexford Slang</a>
+    </div>
+  </nav>
+</header>
+<h3>Register</h3>
+  <div class="row">
+    <form action="register placeholder" method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+        <i class="material-icons prefix">account_box</i>
+            <textarea id="textarea2" name="slang_description" class="materialize-textarea" data-length="8"></textarea>
+            <label for="textarea2">User Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+        <i class="material-icons prefix">face</i>
+            <textarea id="textarea2" name="slang_example"class="materialize-textarea" data-length="20"></textarea>
+            <label for="textarea2">First Name</label>
+        </div>
+           <div class="input-field col s12">
+        <i class="material-icons prefix">face</i>
+            <textarea id="textarea2" name="slang_description" class="materialize-textarea" data-length="20"></textarea>
+            <label for="textarea2">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+        <i class="material-icons prefix">flag</i>
+            <textarea id="textarea2" name="slang_example"class="materialize-textarea" data-length="20"></textarea>
+            <label for="textarea2">Country</label>
+        </div>
+      </div>
+  <button class="btn waves-effect waves-light purple" type="submit" name="action">Back to Login
+    <i class="material-icons right">keyboard_backspace</i>
+  </button>
+<button class="btn waves-effect waves-light purple" type="submit" name="action">Register
+    <i class="material-icons right">send</i>
+  </button>
+
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+     $('input#input_text, textarea#textarea2').characterCounter();
+    $('select').formSelect();
+     $('.sidenav').sidenav();
+  });
+  </script>
+
+</div>
+</body>
+</html>

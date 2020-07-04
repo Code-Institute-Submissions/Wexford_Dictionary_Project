@@ -12,6 +12,15 @@ app.config["MONGO_URI"] = "mongodb+srv://johnmurphy:Admin12345@wexforddictionary
 mongo = PyMongo(app)
 
 @app.route('/')
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/register')
+def register():
+    return render_template('register.html')
+
+
 @app.route('/getslang')
 def getslang ():
     return render_template("slangs.html", slangs=mongo.db.slangs.find())
