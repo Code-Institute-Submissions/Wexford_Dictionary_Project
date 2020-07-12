@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 
@@ -19,6 +19,23 @@ def login():
 @app.route('/register')
 def register():
     return render_template('register.html')
+
+
+@app.route('/insertuser', methods=['POST'])
+def insertuser():
+   
+    user = mongo.db.users
+    if user.find_one({'username': request.form.get('username')}) == None:
+        newuser = {
+            'username': request.form.get('username'),
+            'firstname': request.form.get('firstname'),
+            'lastname': request.form.get('lastname'),
+            'country': request.form.get('country')
+        }
+        user.insert_one(newuser)
+        return redirect(url_for('login'))
+    else:
+        return redirect(url_for('register'))
 
 
 @app.route('/getslang')
@@ -55,7 +72,6 @@ def updateslang(slangid):
     return redirect(url_for('getslang'))
 
 
-
 @app.route('/deleteslang/<slangid>')
 def deleteslang(slangid):
     mongo.db.slangs.remove({'_id': ObjectId(slangid)})
@@ -66,3 +82,7 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
         port=(os.environ.get("PORT")),
         debug=True)
+
+
+    
+   

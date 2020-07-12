@@ -18,41 +18,42 @@
 </header>
 <h3>Register</h3>
   <div class="row">
-    <form action="register placeholder" method="POST" class="col s12">
+    <form action="{{url_for('insertuser')}}" method="POST" class="col s12">
       <div class="row">
         <div class="input-field col s12">
         <i class="material-icons prefix">account_box</i>
-            <textarea id="textarea2" name="slang_description" class="materialize-textarea" data-length="8"></textarea>
+            <textarea id="textarea2" name="username" class="materialize-textarea" data-length="12"></textarea>
             <label for="textarea2">User Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
         <i class="material-icons prefix">face</i>
-            <textarea id="textarea2" name="slang_example"class="materialize-textarea" data-length="20"></textarea>
+            <textarea id="textarea2" name="firstname"class="materialize-textarea" data-length="20"></textarea>
             <label for="textarea2">First Name</label>
         </div>
            <div class="input-field col s12">
         <i class="material-icons prefix">face</i>
-            <textarea id="textarea2" name="slang_description" class="materialize-textarea" data-length="20"></textarea>
+            <textarea id="textarea2" name="lastname" class="materialize-textarea" data-length="20"></textarea>
             <label for="textarea2">Last Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
         <i class="material-icons prefix">flag</i>
-            <textarea id="textarea2" name="slang_example"class="materialize-textarea" data-length="20"></textarea>
+            <textarea id="textarea2" name="country"class="materialize-textarea" data-length="20"></textarea>
             <label for="textarea2">Country</label>
         </div>
       </div>
-<div class="col s12">
+    </div>
+<span>
 <button class="btn waves-effect waves-light purple" type="submit" name="action">Register
     <i class="material-icons right">account_box</i>
   </button>
- </div>
-  <div class="col s12">
+ </span>
+  <span>
 <a href="{{url_for('login')}}" class="btn waves-effect waves-light purple" ><i class="material-icons right">keyboard_backspace</i>Back to Log in</a>
-</div>
+</span>
 
 
 <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
