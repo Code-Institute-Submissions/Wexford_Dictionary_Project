@@ -45,12 +45,15 @@
             <label for="textarea2">Country</label>
         </div>
       </div>
-  <button class="btn waves-effect waves-light purple" type="submit" name="action">Back to Login
-    <i class="material-icons right">keyboard_backspace</i>
-  </button>
+<div class="col s12">
 <button class="btn waves-effect waves-light purple" type="submit" name="action">Register
-    <i class="material-icons right">send</i>
+    <i class="material-icons right">account_box</i>
   </button>
+ </div>
+  <div class="col s12">
+<a href="{{url_for('login')}}" class="btn waves-effect waves-light purple" ><i class="material-icons right">keyboard_backspace</i>Back to Log in</a>
+</div>
+
 
 <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -62,6 +65,9 @@
      $('.sidenav').sidenav();
   });
   </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript">
 
 </div>
 </body>
