@@ -45,9 +45,9 @@ def isuser():
     user = mongo.db.users.find_one({'username': formusername})
 
     if user != None:
-        print('Username Exists')
+       return redirect(url_for('getslang'))
     else:
-       print('Username does not exist')
+       return redirect(url_for('login'))
 
 
 @app.route('/getslang')
