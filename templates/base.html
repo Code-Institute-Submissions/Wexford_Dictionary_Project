@@ -15,14 +15,16 @@
       <a href="#!" class="brand-logo center purple">Wexford Slang</a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="left hide-on-med-and-down purple">
-        <li><a href="{{url_for('getslang')}}">Home</a></li>
+         <li><a href="{{url_for('home')}}">Home</a></li>
+        <li><a href="{{url_for('getslang')}}">Browse</a></li>
         <li><a href="{{url_for('add_slang')}}">Add Slang</a></li>
-        <li><a href="{{url_for('add_slang')}}">Analytics</a></li>
+        <li><a href="{{url_for('login')}}">Log Out</a></li>
       </ul>
     <ul class="sidenav" id="mobile-demo">
         <li><a href="{{url_for('getslang')}}">Home</a></li>
+        <li><a href="placeholder">Browse</a></li>
         <li><a href="{{url_for('add_slang')}}">Add Slang</a></li>
-        <li><a href="{{url_for('add_slang')}}">Analytics</a></li>
+        <li><a href="{{url_for('login')}}">Log Out</a></li>
   </ul>
     </div>
   </nav>

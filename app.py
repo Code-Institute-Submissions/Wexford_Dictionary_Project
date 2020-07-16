@@ -20,6 +20,10 @@ def login():
 def register():
     return render_template('register.html')
 
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
 
 @app.route('/insertuser', methods=['POST'])
 def insertuser():
@@ -45,7 +49,7 @@ def isuser():
     user = mongo.db.users.find_one({'username': formusername})
 
     if user != None:
-       return redirect(url_for('getslang'))
+       return redirect(url_for('home'))
     else:
        return redirect(url_for('login'))
 
