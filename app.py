@@ -56,7 +56,7 @@ def isuser():
 
 @app.route('/getslang')
 def getslang ():
-    return render_template("slangs.html", slangs=mongo.db.slangs.find())
+    return render_template("slangs.html", slangs=mongo.db.slangs.find(), categories=mongo.db.categories.find())
 
 @app.route('/addslang')
 def add_slang():

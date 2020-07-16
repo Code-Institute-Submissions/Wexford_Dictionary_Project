@@ -2,6 +2,25 @@
 {% block content %}
 
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container filters">   
+    <div class="input-field col s6">
+        <i class="material-icons prefix">category</i>
+    <select id="category" name="category_name">
+      <option value="" disabled selected>Category</option>
+      {% for cat in categories %}
+      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+      {% endfor %}
+    </select>
+  </div>
+</div>  
 <ul class="collapsible">
     {% for slangs in slangs %}
     <li>
@@ -15,10 +34,16 @@
         <strong>{{slangs.slang_name}}</div></strong>
        </div> 
       <div class="collapsible-body">
+        <div><strong>Category: </strong>{{slangs.category_name}}</div>
       <div><strong>Description: </strong>{{slangs.slang_description}}</div>
       <div><strong>Example: </strong><em>{{slangs.slang_example}}</em></div>
       </div>
     </li>
      {% endfor %}
   </ul>
+
+
+</body>
 {% endblock %}
+</html>
+
