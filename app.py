@@ -38,6 +38,18 @@ def insertuser():
         return redirect(url_for('register'))
 
 
+@app.route('/isuser', methods=['POST'])
+def isuser():
+
+    formusername = request.form.get('username')
+    user = mongo.db.users.find_one({'username': formusername})
+
+    if user != None:
+        print('Username Exists')
+    else:
+       print('Username does not exist')
+
+
 @app.route('/getslang')
 def getslang ():
     return render_template("slangs.html", slangs=mongo.db.slangs.find())

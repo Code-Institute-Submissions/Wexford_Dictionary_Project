@@ -19,19 +19,17 @@
 <div class="container">
 <h3>Login</h3>
   <div class="row">
-    <form action="loginplaceholder" type="submit" class="col s12">
+    <form action="{{url_for('isuser')}}" type="submit" class="col s12">
       <div class="row">
         <div class="input-field col s12">
         <i class="material-icons prefix">account_box</i>
-            <textarea id="textarea2" name="slang_description" class="materialize-textarea" data-length="8"></textarea>
+            <textarea id="textarea2" name="username" class="materialize-textarea" data-length="20"></textarea>
             <label for="textarea2">User Name</label>
         </div>
       </div>
-<span>
-<button class="btn waves-effect waves-light purple" type="submit" name="action">Login
+<button class="btn waves-effect waves-light purple" type="POST" name="action">Login
     <i class="material-icons right">send</i>
   </button>
-</span>
 <span>
 <a href="{{url_for('register')}}" class="btn waves-effect waves-light purple" ><i class="material-icons right">account_box</i>Register</a>
 </span>
