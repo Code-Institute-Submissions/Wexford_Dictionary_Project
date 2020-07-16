@@ -1,39 +1,92 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# *Wexford Slang Dictionary*
+## MilestoneProject3 - Data Centric Development Milestone Project
 
-Welcome Murphj99,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+Application Demo [Wexford Slang Dictionary](https://murphj99.github.io/MilestoneProject2StarWarsMemoryGame/)
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Description
 
-`python3 -m http.server`
+This application is designed to allow its users to create, view, edit and delete slang/jargon and on a smaller scale than sites like urban dictionary.
+The application will store slang/jargon the users create and display these in accordion style lists for other users to view and add their own definitions.
+During the testing phase of this application I have found many users enjoying the definitions and prompting an "All Ireland Slang Dictionary".
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
+## UX
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The site has been designed with minimalism in mind, to allow users of all ages and levels of computer literacy to enjoy. The site also represents the Wexford County colours purple and gold. The UI is easy to navigate and users can view, add and edit slang words with ease. 
+During my research of jargon glossaries I found out that by adding images/photos to slang dictionaries you open up pathways to online bullying so I took the decision to leave the site as text and colours only.
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
+## UserStories
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
+- Users will be able to View Slang Words to the site
+- Users will be able to Add Slang Words to the site
+- Users will be able to Edit Slang words on the site
+- Users will be able to Delete Slang words off the site
+- Users will be able to browse through all existing Slang words
+- Users will be able to apply a filter to make searching through slang words easier
+- Users will be able to register themselves as a user with some additional metadata for future use
+- Users will be able to log on and usernames will be stores for future use when developing the site further
+- Users will be able to easily click and view the Slang descriptions without being redirected to another screen
+- Users will be able to easily click and view the Slang names without being redirected to another screen
+- Users will be able to easily click and view the Slang examples without being redirected to another screen
+- Users will be able to log out of the site
 
-## Updates Since The Instructional Video
 
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
+## Wireframes
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+1. Registration Desktop Screen [here](libraries/wireframes/)
+2. Registration Mobile Screen [here](libraries/wireframes/)
+1. Login Desktop Screen [here](libraries/wireframes/)
+2. Login Mobile Screen [here](libraries/wireframes/)
+1. Add/Edit Slang Desktop Screen [here](libraries/wireframes/)
+2. Add/Edit Slang Mobile Screen [here](libraries/wireframes/)
+1. Browse Desktop Screen [here](libraries/wireframes/)
+2. Browse Mobile Screen [here](libraries/wireframes/)
+1. Home Desktop Screen [here](libraries/wireframes/)
+2. Home Mobile Screen [here](libraries/wireframes/)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Features
 
---------
+- User Registration: allows users to register themselves on the site
+- User Login: allows users to log on to the site 
+- View Slang: allows users to view the slang on the site
+- Add Slang: allows users to add their own slang to the site
+- Edit Slang: allows users to edit slang on the site
+- Delete Slang: allows users to delete slang on the site
+- Browse Slang: allows users to browse slang on the site
+- Filter Slang: allows users to filter through the different categories of slang words on the site
+- User logout: allows users to logout of the site
 
-Happy coding!
+
+
+## Future Features
+
+Unfortunately my work life was heavily impacted by Covid19 during the course of this project and my worklife balance was greatly affected. 
+As a result I did not get the same amount of time as past projects to implement a lot of the features I would have liked. 
+The below are features I would like to include in the future:
+
+- Pagination
+- Search based on full / partial name
+- Search based on description full/partial
+- Views/Likes Functionality
+- Analytics on most upvoted & from what countries
+- Analytics on most views & from what countries
+- Count Page visits
+- Errors when incorrect/blank usernames are added
+- Add ownership & usernames to each of the added slang Words
+- Add an administrative section to approve submitted slang words before being displayed.
+- Smoother refreshing when filtering categories
+
+## Pages
+
+1. addslangwords.html: screen to add slangs to mongoDB and display them on screen
+2. base.html: contains NAV bars, Block content and relevant JS
+3. editslangwords.html: screen to edit slangs in mongoDB and display the changes on screen
+4. home.html: main drop page, greets user with options
+5. login.html: Login page & allows user to click and register
+6. register.html: Register page & allows users to click and login
+7. slangs.html: browse the list of slang words on the site
