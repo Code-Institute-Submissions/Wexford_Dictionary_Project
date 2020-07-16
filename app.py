@@ -56,7 +56,12 @@ def isuser():
 
 @app.route('/getslang')
 def getslang ():
-    return render_template("slangs.html", slangs=mongo.db.slangs.find(), categories=mongo.db.categories.find())
+    category = request.args.get('category')
+    if category is None:
+        filter = {}
+    else:
+        filter = {'category_name': { '$eq': category }} 
+    return render_template("slangs.html", slangs=mongo.db.slangs.find(filter), categories=mongo.db.categories.find())
 
 @app.route('/addslang')
 def add_slang():
@@ -96,9 +101,6 @@ def deleteslang(slangid):
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("0.0.0.0"),
-        port=(os.environ.get("5000")),
+        port=(os.environ.get("PORT")),
         debug=True)
 
-
-    
-   

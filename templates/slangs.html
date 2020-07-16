@@ -42,6 +42,15 @@
      {% endfor %}
   </ul>
 
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function() { 
+        $('#category').change(function() { 
+            const selectedCategory = $(this).val();
+            window.location.href = window.location.pathname+"?"+$.param({'category':selectedCategory})
+            }); 
+    });
+</script>
 
 </body>
 {% endblock %}
