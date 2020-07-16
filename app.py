@@ -61,7 +61,7 @@ def getslang ():
         filter = {}
     else:
         filter = {'category_name': { '$eq': category }} 
-    return render_template("slangs.html", slangs=mongo.db.slangs.find(filter), categories=mongo.db.categories.find())
+    return render_template("slangs.html", slangs=mongo.db.slangs.find(filter).sort("slang_name"), categories=mongo.db.categories.find())
 
 @app.route('/addslang')
 def add_slang():
@@ -100,7 +100,7 @@ def deleteslang(slangid):
 
 
 if __name__ == "__main__":
-    app.run(host=os.environ.get("0.0.0.0"),
+    app.run(host=os.environ.get("IP"),
         port=(os.environ.get("PORT")),
         debug=True)
 
