@@ -44,6 +44,7 @@ def insertuser():
         user.insert_one(newuser)
         return redirect(url_for('login'))
     else:
+        flash('Username already exists!')
         return redirect(url_for('register'))
 
 
@@ -56,7 +57,8 @@ def isuser():
     if user != None:
        return redirect(url_for('home'))
     else:
-       return redirect(url_for('login'))
+        flash('Username does not exist!')
+    return redirect(url_for('login'))
 
 
 @app.route('/getslang')
