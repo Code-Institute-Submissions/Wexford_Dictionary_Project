@@ -20,14 +20,13 @@
 <h3>Login</h3>
   <div class="row">
     <form action="{{url_for('isuser')}}" method="POST" class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
+<div class="input-field col s12">
         <i class="material-icons prefix">account_box</i>
-            <textarea id="textarea2" name="username" class="materialize-textarea" data-length="20"></textarea>
-            <label for="textarea2">User Name</label>
-        </div>
-      </div>
-<button class="btn waves-effect waves-light purple" type="POST" name="action">Login
+        <input type="text" id="username" name="username" data-length="20" style="height: 45px;" />
+        <label for="username" class="">User Name</label>
+        <span class="character-counter" style="float: right; font-size: 12px;">0/20</span>
+</div>
+<button class="btn waves-effect waves-light purple" type="submit" name="action">Login
     <i class="material-icons right">send</i>
   </button>
 <span>

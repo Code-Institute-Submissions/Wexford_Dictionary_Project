@@ -20,27 +20,36 @@
 <h3>Register</h3>
     <div>
     <form action="{{url_for('insertuser')}}" method="POST" class="col s12">
-        <div class="input-field col s12">
+     <div class="input-field col s12">
         <i class="material-icons prefix">account_box</i>
-            <textarea id="textarea2" name="username" class="materialize-textarea" data-length="20"></textarea>
-            <label for="textarea2">User Name</label>
-        </div>
-        <div class="input-field col s12">
+        <input type="text" id="username" name="username" data-length="20" style="height: 45px;" />
+        <label for="username" class="">User Name</label>
+        <span class="character-counter" style="float: right; font-size: 12px;">0/20</span>
+    </div>
+
+     <div class="input-field col s12">
         <i class="material-icons prefix">face</i>
-            <textarea id="textarea2" name="firstname"class="materialize-textarea" data-length="20"></textarea>
-            <label for="textarea2">First Name</label>
-        </div>
-           <div class="input-field col s12">
+        <input type="text" id="firstname" name="firstname" data-length="20" style="height: 45px;" />
+        <label for="username" class="">First Name</label>
+        <span class="character-counter" style="float: right; font-size: 12px;">0/20</span>
+    </div>
+
+    <div class="input-field col s12">
         <i class="material-icons prefix">face</i>
-            <textarea id="textarea2" name="lastname" class="materialize-textarea" data-length="20"></textarea>
-            <label for="textarea2">Last Name</label>
-        </div>
-        <div class="input-field col s12">
+        <input type="text" id="lastname" name="lastname" data-length="20" style="height: 45px;" />
+        <label for="username" class="">Last Name</label>
+        <span class="character-counter" style="float: right; font-size: 12px;">0/20</span>
+    </div>
+  
+  <div class="input-field col s12">
         <i class="material-icons prefix">flag</i>
-            <textarea id="textarea2" name="country"class="materialize-textarea" data-length="20"></textarea>
-            <label for="textarea2">Country</label>
-        </div>
-        </div>
+        <input type="text" id="country" name="country" data-length="20" style="height: 45px;" />
+        <label for="username" class="">Country</label>
+        <span class="character-counter" style="float: right; font-size: 12px;">0/20</span>
+    </div>
+
+  
+    </div>
 <span>
 <button class="btn waves-effect waves-light purple" type="submit" name="action">Sign up
     <i class="material-icons right">account_box</i>
