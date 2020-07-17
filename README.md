@@ -2,7 +2,7 @@
 ## MilestoneProject3 - Data Centric Development Milestone Project
 
 
-Application Demo [Wexford Slang Dictionary](https://murphj99.github.io/MilestoneProject2StarWarsMemoryGame/)
+Application Demo [Wexford Slang Dictionary](https://wexforddictionaryproject.herokuapp.com/)
 
 
 ## Description
@@ -38,14 +38,14 @@ During my research of jargon glossaries I found out that by adding images/photos
 
 1. Registration Desktop Screen [here](libraries/wireframes/)
 2. Registration Mobile Screen [here](libraries/wireframes/)
-1. Login Desktop Screen [here](libraries/wireframes/)
-2. Login Mobile Screen [here](libraries/wireframes/)
-1. Add/Edit Slang Desktop Screen [here](libraries/wireframes/)
-2. Add/Edit Slang Mobile Screen [here](libraries/wireframes/)
-1. Browse Desktop Screen [here](libraries/wireframes/)
-2. Browse Mobile Screen [here](libraries/wireframes/)
-1. Home Desktop Screen [here](libraries/wireframes/)
-2. Home Mobile Screen [here](libraries/wireframes/)
+3. Login Desktop Screen [here](libraries/wireframes/)
+4. Login Mobile Screen [here](libraries/wireframes/)
+5. Add/Edit Slang Desktop Screen [here](libraries/wireframes/)
+6. Add/Edit Slang Mobile Screen [here](libraries/wireframes/)
+7. Browse Desktop Screen [here](libraries/wireframes/)
+8. Browse Mobile Screen [here](libraries/wireframes/)
+9. Home Desktop Screen [here](libraries/wireframes/)
+10. Home Mobile Screen [here](libraries/wireframes/)
 
 
 
@@ -111,6 +111,7 @@ Iphone 7 | Passed - some forms were not clicking/tapping properly on mobile devi
 Iphone X | Passed - some forms were not clicking/tapping properly on mobile devices when testing from github - problem resolved when app tested through Heroku deployment
 Friends & Family Testing | Passed - Family & Friend suggested enhancements to develop further to an All Ireland App but enjoyed the concept of the Wexford Slang Dictionary
 Responsive Design| Passed
+Githubs Debug Log | Passed
 
 
 Browser Test | Outcome
@@ -214,7 +215,15 @@ The following are the other Technologies used throughout the build process:
     - Provided useful tools and features making the application more resourceful e.g. flash messaging
 
 
+## View Project
+
+* The code used to develop this memory game can be viewed [here](https://github.com/Murphj99/Wexford_Dictionary_Project)
+* The live version of the Game deployed using [Heroku](https://dashboard.heroku.com/apps/wexforddictionaryproject) can be viewed here [WexfordDictionary](https://wexforddictionaryproject.herokuapp.com/)
 
 
+## Acknowledgements
+* I got the idea to create a Jargon/Slang Dictionary application from [Code Institute](https://www.codeinstitute.net).
 
 
+## Disclaimer
+* This project was created for educational purposes only.
