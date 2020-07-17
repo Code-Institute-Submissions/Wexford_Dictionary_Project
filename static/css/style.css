@@ -1,21 +1,20 @@
 body {
-    background-color: lightgrey;
+	background-color: lightgrey;
 }
 
 .btn_xsml {
-    height: 24px;
-    width: 60px;
-    line-height: 24px;
-    margin: 5px 5px;
-    padding: 0 0.5em;
+	height: 24px;
+	width: 60px;
+	line-height: 24px;
+	margin: 5px 5px;
+	padding: 0 0.5em;
 }
 
 .accordion {
-    margin-top: 8px;
-    margin-left: 20px;
+	margin-top: 8px;
+	margin-left: 20px;
 }
 
-
 .waves-effect {
-    margin: 2px;
+	margin: 2px;
 }

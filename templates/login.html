@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wexford Slang Dictionary</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
-</head>
-<body>
-<header>
-  <nav>
-    <div class="nav-wrapper purple">
-      <a href="#!" class="brand-logo center purple">Wexford Slang</a>
-    </div>
-  </nav>
-</header>
-<div class="container">
-<h3>Login</h3>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Wexford Slang Dictionary</title>
+				<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+						<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
+						</head>
+						<body>
+							<header>
+								<nav>
+									<div class="nav-wrapper purple">
+										<a href="#!" class="brand-logo center purple">Wexford Slang</a>
+									</div>
+								</nav>
+							</header>
+							<div class="container">
+								<h3>Login</h3>
 {% for message in get_flashed_messages()%}
     {{ message }} 
     {% endfor %}
-  <div class="row">
-    <form action="{{url_for('isuser')}}" method="POST" class="col s12">
-<div class="input-field col s12">
-        <i class="material-icons prefix">account_box</i>
-        <input type="text" id="username" name="username" data-length="20" style="height: 45px;" class="validate" required />
-        <label for="username" class="">User Name</label>
-        <span class="character-counter" style="float: right; font-size: 12px;">0/20</span>
-</div>
-<button class="btn waves-effect waves-light purple" type="submit" name="action">Login
-    <i class="material-icons right">send</i>
-  </button>
-<span>
-<a href="{{url_for('register')}}" class="btn waves-effect waves-light purple" ><i class="material-icons right">account_box</i>Register</a>
-</span>
-
-</div>
-
-<script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script type="text/javascript">
+  
+								<div class="row">
+									<form action="{{url_for('isuser')}}" method="POST" class="col s12">
+										<div class="input-field col s12">
+											<i class="material-icons prefix">account_box</i>
+											<input type="text" id="username" name="username" data-length="20" style="height: 45px;" class="validate" required />
+											<label for="username" class="">User Name</label>
+											<span class="character-counter" style="float: right; font-size: 12px;">0/20</span>
+										</div>
+										<button class="btn waves-effect waves-light purple" type="submit" name="action">Login
+    
+											<i class="material-icons right">send</i>
+										</button>
+										<span>
+											<a href="{{url_for('register')}}" class="btn waves-effect waves-light purple" >
+												<i class="material-icons right">account_box</i>Register
+											</a>
+										</span>
+									</div>
+									<script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+									<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+									<script type="text/javascript">
   $(document).ready(function(){
     $('.collapsible').collapsible();
      $('input#input_text, textarea#textarea2').characterCounter();
@@ -48,11 +50,8 @@
      $('.sidenav').sidenav();
   });
   </script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script type="text/javascript">
-
-</div>
-</body>
-</html>
+									<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+									<script type="text/javascript">
+									</div>
+								</body>
+							</html>

@@ -1,51 +1,52 @@
 {% extends 'base.html' %} {% block content %}
 
+
 <h3>Edit Slang</h3>
-  <div class="row">
-    <form action="{{ url_for('updateslang', slangid=slang._id) }}" method="POST" class="col s12">
-       <div class="input-field col s6">
-        <i class="material-icons prefix">category</i>
-    <select id="category" name="category_name">
-      <option value="" disabled selected>Category</option>
+<div class="row">
+	<form action="{{ url_for('updateslang', slangid=slang._id) }}" method="POST" class="col s12">
+		<div class="input-field col s6">
+			<i class="material-icons prefix">category</i>
+			<select id="category" name="category_name">
+				<option value="" disabled selected>Category</option>
       {% for cat in categories %}
       {% if cat.category_name == slang.category_name %}
-      <option value="{{cat.category_name}}" selected >{{cat.category_name}}</option>
+      
+				<option value="{{cat.category_name}}" selected >{{cat.category_name}}</option>
        {% else %}
-         <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+         
+				<option value="{{cat.category_name}}">{{cat.category_name}}</option>
        {% endif %}
       {% endfor %}
-    </select>
-    <label>Category</label>
-  </div>
-        <div class="input-field col s6">
-        <i class="material-icons prefix">help</i>
-          <input id="last_name" name="slang_name" type="text" class="validate" value="{{slang.slang_name}}" required>
-          <label for="last_name">Slang Word</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-        <i class="material-icons prefix">mode_edit</i>
-            <textarea id="textarea2" name="slang_description" class="materialize-textarea" data-length="120">{{slang.slang_description}}</textarea>
-            <label for="textarea2">Slang Description</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-        <i class="material-icons prefix">mode_edit</i>
-            <textarea id="textarea2" name="slang_example"class="materialize-textarea" data-length="120">{{slang.slang_example}}</textarea>
-            <label for="textarea2">Slang Example</label>
-        </div>
-      </div>
-<button class="btn waves-effect waves-light purple" type="submit" name="action">Update Slang
-    <i class="material-icons right">send</i>
-  </button>
-
- </form>
+    
+			</select>
+			<label>Category</label>
+		</div>
+		<div class="input-field col s6">
+			<i class="material-icons prefix">help</i>
+			<input id="last_name" name="slang_name" type="text" class="validate" value="{{slang.slang_name}}" required>
+				<label for="last_name">Slang Word</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="material-icons prefix">mode_edit</i>
+				<textarea id="textarea2" name="slang_description" class="materialize-textarea" data-length="120">{{slang.slang_description}}</textarea>
+				<label for="textarea2">Slang Description</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="material-icons prefix">mode_edit</i>
+				<textarea id="textarea2" name="slang_example"class="materialize-textarea" data-length="120">{{slang.slang_example}}</textarea>
+				<label for="textarea2">Slang Example</label>
+			</div>
+		</div>
+		<button class="btn waves-effect waves-light purple" type="submit" name="action">Update Slang
+    
+			<i class="material-icons right">send</i>
+		</button>
+	</form>
 </div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script type="text/javascript">
-
-</script>
+<script type="text/javascript"></script>
 {% endblock %}

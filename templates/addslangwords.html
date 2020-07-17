@@ -1,44 +1,47 @@
 {% extends 'base.html' %} {% block content %}
 
-<h3>Add Slang</h3>
-  <div class="row">
-    <form action="{{url_for('insertslang')}}" method="POST" class="col s12">
-       <div class="input-field col s6">
-        <i class="material-icons prefix">category</i>
-    <select id="category" name="category_name">
-      <option value="" disabled selected>Category</option>
-      {% for cat in categories %}
-      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
-      {% endfor %}
-    </select>
-    <label>Category</label>
-  </div>
-  <div>
-        <div class="input-field col s6">
-        <i class="material-icons prefix">help</i>
-          <input id="slangword" name="slang_name" type="text" class="validate" required>
-          <label for="slangword">Slang Word</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-        <i class="material-icons prefix">mode_edit</i>
-            <textarea id="textarea2" name="slang_description" class="materialize-textarea" data-length="120"></textarea>
-            <label for="textarea2">Slang Description</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-        <i class="material-icons prefix">mode_edit</i>
-            <textarea id="textarea2" name="slang_example" class="materialize-textarea" data-length="120"></textarea>
-            <label for="textarea2">Slang Example</label>
-        </div>
-      </div>
-<button class="btn waves-effect waves-light purple" type="submit" name="action">Add Slang
-    <i class="material-icons right">send</i>
-  </button>
 
- </form>
+<h3>Add Slang</h3>
+<div class="row">
+	<form action="{{url_for('insertslang')}}" method="POST" class="col s12">
+		<div class="input-field col s6">
+			<i class="material-icons prefix">category</i>
+			<select id="category" name="category_name">
+				<option value="" disabled selected>Category</option>
+      {% for cat in categories %}
+      
+				<option value="{{cat.category_name}}">{{cat.category_name}}</option>
+      {% endfor %}
+    
+			</select>
+			<label>Category</label>
+		</div>
+		<div>
+			<div class="input-field col s6">
+				<i class="material-icons prefix">help</i>
+				<input id="slangword" name="slang_name" type="text" class="validate" required>
+					<label for="slangword">Slang Word</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">mode_edit</i>
+					<textarea id="textarea2" name="slang_description" class="materialize-textarea" data-length="120"></textarea>
+					<label for="textarea2">Slang Description</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="material-icons prefix">mode_edit</i>
+					<textarea id="textarea2" name="slang_example" class="materialize-textarea" data-length="120"></textarea>
+					<label for="textarea2">Slang Example</label>
+				</div>
+			</div>
+			<button class="btn waves-effect waves-light purple" type="submit" name="action">Add Slang
+    
+				<i class="material-icons right">send</i>
+			</button>
+		</form>
 
     
 {% endblock %}
