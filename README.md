@@ -51,16 +51,16 @@ During my research of jargon glossaries I found out that by adding images/photos
 
 ## Wireframes
 
-1. Registration Desktop Screen [here](libraries/wireframes/)
-2. Registration Mobile Screen [here](libraries/wireframes/)
-3. Login Desktop Screen [here](libraries/wireframes/)
-4. Login Mobile Screen [here](libraries/wireframes/)
-5. Add/Edit Slang Desktop Screen [here](libraries/wireframes/)
-6. Add/Edit Slang Mobile Screen [here](libraries/wireframes/)
-7. Browse Desktop Screen [here](libraries/wireframes/)
-8. Browse Mobile Screen [here](libraries/wireframes/)
-9. Home Desktop Screen [here](libraries/wireframes/)
-10. Home Mobile Screen [here](libraries/wireframes/)
+1. Registration Desktop Screen [here](libraries/wireframes/registerdesktop.JPG)
+2. Registration Mobile Screen [here](libraries/wireframes/registermobile.JPG)
+3. Login Desktop Screen [here](libraries/wireframes/logindesktop.JPG)
+4. Login Mobile Screen [here](libraries/wireframes/loginmobile.JPG)
+5. Add/Edit Slang Desktop Screen [here](libraries/wireframes/addeditslangdesktop.JPG)
+6. Add/Edit Slang Mobile Screen [here](libraries/wireframes/addeditslangmobile.JPG)
+7. Browse Desktop Screen [here](libraries/wireframes/browsedesktop.JPG)
+8. Browse Mobile Screen [here](libraries/wireframes/browsemobile.JPG)
+9. Home Desktop Screen [here](libraries/wireframes/homedesktop.JPG)
+10. Home Mobile Screen [here](libraries/wireframes/homemobile.JPG)
 
 
 
