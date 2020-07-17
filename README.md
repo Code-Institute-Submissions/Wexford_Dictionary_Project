@@ -151,6 +151,7 @@ Browser Test | Outcome
  Edit Slang (example) | Passed
  Edit Slang (submit) | Passed
  Edit Slang (hyperlinks) | Passed
+ Delete Slang | Passed
  Logout | Passed
  Login screen | Passed
  Login screen (username required & feedback) | Passed
@@ -186,7 +187,7 @@ N.B. my application was failing in Heroku due to an error in my requirements.txt
 
 ## Technologies
 
-The project is built using Python, HTML, CSS and Javascript as its main components.
+The project is built using Python, HTML, CSS and Jquery as its main components.
 
 The following are the other Technologies used throughout the build process:
 * [JQuery](https://jquery.com)
@@ -217,8 +218,8 @@ The following are the other Technologies used throughout the build process:
 
 ## View Project
 
-* The code used to develop this memory game can be viewed [here](https://github.com/Murphj99/Wexford_Dictionary_Project)
-* The live version of the Game deployed using [Heroku](https://dashboard.heroku.com/apps/wexforddictionaryproject) can be viewed here [WexfordDictionary](https://wexforddictionaryproject.herokuapp.com/)
+* The code used to develop this slang dictionary application can be viewed [here](https://github.com/Murphj99/Wexford_Dictionary_Project)
+* The live version of the application was deployed using [Heroku](https://dashboard.heroku.com/apps/wexforddictionaryproject) and can be viewed here [WexfordDictionary](https://wexforddictionaryproject.herokuapp.com/)
 
 
 ## Acknowledgements
