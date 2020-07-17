@@ -2,12 +2,17 @@ import os
 from flask import Flask, render_template, redirect, request, url_for, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from os import path 
+if path.exists("env.py"):
+    import env
 
 app = Flask(__name__)
 
 
 app.config["MONGO_DBNAME"] = "wexfordDictionary"
-app.config["MONGO_URI"] = "mongodb+srv://johnmurphy:Admin12345@wexforddictionary.a6e7r.mongodb.net/wexfordDictionary?retryWrites=true&w=majority"
+app.config["MONGO_URI"] = os.getenv('MONGO_URI')
+
+app.secret_key = os.getenv('SECRET_KEY')
 
 mongo = PyMongo(app)
 
