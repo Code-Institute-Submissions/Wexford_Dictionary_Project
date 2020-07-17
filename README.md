@@ -96,21 +96,21 @@ The below are features I would like to include in the future:
 
 Test | Outcome
 ------------ | -------------
-W3C HTML validation for addslangwords.html | 
-W3C HTML validation for base.html| 
-W3C HTML validation for editslangwords.html | 
-W3C HTML validation for home.html | 
-W3C HTML validation for login.html | 
-W3C HTML validation for register.html | 
-W3C HTML validation for slangs.html | 
-W3C CSS validation for All | 
-JSHint Javascript Test |
+W3C HTML validation for addslangwords.html | Passed - Errors only on python elements
+W3C HTML validation for base.html| Passed - Errors only on python elements
+W3C HTML validation for editslangwords.html | Passed - Errors only on python elements
+W3C HTML validation for home.html | Passed - Errors only on python elements
+W3C HTML validation for login.html | Passed - Errors only on python elements
+W3C HTML validation for register.html | Passed - Errors only on python elements
+W3C HTML validation for slangs.html | Passed - Errors only on python elements
+W3C CSS validation for All | Passed
+JSHint Javascript Test | Passed
 Chrome developer tools (debugging and responsiveness testing -including all devices available) | Passed
-Samsung A50 |  
-Iphone 7 |  
-Iphone X | 
-Friends & Family Testing |  
-Responsive Design|  
+Samsung A50 | Passed - some forms were not clicking/tapping properly on mobile devices when testing from github - problem resolved when app tested through Heroku deployment
+Iphone 7 | Passed - some forms were not clicking/tapping properly on mobile devices when testing from github - problem resolved when app tested through Heroku deployment
+Iphone X | Passed - some forms were not clicking/tapping properly on mobile devices when testing from github - problem resolved when app tested through Heroku deployment
+Friends & Family Testing | Passed - Family & Friend suggested enhancements to develop further to an All Ireland App but enjoyed the concept of the Wexford Slang Dictionary
+Responsive Design| Passed
 
 
 Browser Test | Outcome
@@ -122,7 +122,99 @@ Browser Test | Outcome
  Safari | Passed
 
 
+
  On Screen Tests | Outcome
 ------------ | -------------
- Main screen | Passed
+ Home screen | Passed
+ Home screen (add slang) | Passed
+ Home screen (browse all) | Passed
+ Home screen (hyperlinks) | Passed
+ Browse screen | Passed
+ Browse screen (refresh list) | Passed
+ Browse screen (filter) | Passed
+ Browse screen (delete) | Passed
+ Browse screen (edit) | Passed
+ Browse screen (expand) | Passed
+ Browse screen (hyperlinks) | Passed
+ Add Slang | Passed
+ Add Slang (select category) | Passed
+ Add Slang (required slang word) | Passed
+ Add Slang (description) | Passed
+ Add Slang (example) | Passed
+ Add Slang (submit) | Passed
+ Add Slang (hyperlinks) | Passed
+ Edit Slang | Passed
+ Edit Slang (select category) | Passed
+ Edit Slang (required slang word) | Passed
+ Edit Slang (description) | Passed
+ Edit Slang (example) | Passed
+ Edit Slang (submit) | Passed
+ Edit Slang (hyperlinks) | Passed
+ Logout | Passed
+ Login screen | Passed
+ Login screen (username required & feedback) | Passed
+ Login screen (register redirect) | Passed
+ Login screen (submit) | Passed
+ Register screen | Passed
+
+
+
+## Deployment
+
+GitHub was used to develop the project, store code in the repository and maintain the version control of this project. 
+The live demo has been deployed using Heroku and all versions pushed to the master branch on github are automatically deployed the Heroku Master.
+
+The following steps were used to deploy the Wexford Slang Dictionary on Heroku:
+
+1. Created an App Name
+2. Logged into Heroku using $ heroku login creating a connection between Github and the Heroku application
+3. Checked Heroku Apps to make sure my project was available
+4. Created a new Git repository using git init
+5. Added my files to the repositary and associated my Heroku application as my master branch(remote master branch)
+6. Created my requirements.txt file
+7. Created my ProcFile
+8. Added both files to github and pushed to Heroku Master
+9. Ran my application using $ heroke ps:scale web=1 to scale dynos
+10. Logged into Heroku and set up the Config Variables in the settings > config variables section (IP & PORT)
+11. Application Deployed
+12. The link generated can be used instantly. The link generated for this site as: https://wexforddictionaryproject.herokuapp.com/
+13. I connected my Heroku App to github to automatically deploy from the master branch, I managed the build through github then would test the app through heroku every few commits/pushes. 
+
+
+N.B. my application was failing in Heroku due to an error in my requirements.txt file not finding PyMongo. Troubleshooted many issues using the Heroku logs functionality which was very useful in locating the error. 
+
+## Technologies
+
+The project is built using Python, HTML, CSS and Javascript as its main components.
+
+The following are the other Technologies used throughout the build process:
+* [JQuery](https://jquery.com)
+    - Used to create more robust functionalities in forms and filters 
+* [Materialize](https://materializecss.com/)
+    - Used for developing a modern responsive front-end framework based on Material Design
+* [Material Icons](https://material.io/resources/icons/?style=baseline)
+    - Used for useful icons to provide more intuitive UI.
+* [GitHub](https://github.com/)
+    - Used to develop, store and share code & Pushed to Heroku master.
+* [Balsamiq](https://balsamiq.com/)
+    - Used to create the original wireframes for the project.
+* [Dev Tools](https://www.google.com/chrome/)
+    - Used continuously when building the application & debugging any HTML, CSS & JS issues.
+* [CSS Validator](https://jigsaw.w3.org/css-validator/validator)
+    - Used to validate CSS code.
+* [HTML Validator](https://validator.w3.org/)
+    - Used to validate HTML code.
+* [Javascript Validator](https://jshint.com/)
+    - Used to validate Javascript code.
+* [MongoDB](https://www.mongodb.com/)
+    - Used to create the database for CRUD operations
+* [Heroku](https://dashboard.heroku.com/apps)
+    - Used to build, run, and operate my application
+* [Flask](https://dashboard.heroku.com/apps)
+    - Provided useful tools and features making the application more resourceful e.g. flash messaging
+
+
+
+
+
 
