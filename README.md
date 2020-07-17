@@ -90,3 +90,39 @@ The below are features I would like to include in the future:
 5. login.html: Login page & allows user to click and register
 6. register.html: Register page & allows users to click and login
 7. slangs.html: browse the list of slang words on the site
+
+
+## Testing
+
+Test | Outcome
+------------ | -------------
+W3C HTML validation for addslangwords.html | 
+W3C HTML validation for base.html| 
+W3C HTML validation for editslangwords.html | 
+W3C HTML validation for home.html | 
+W3C HTML validation for login.html | 
+W3C HTML validation for register.html | 
+W3C HTML validation for slangs.html | 
+W3C CSS validation for All | 
+JSHint Javascript Test |
+Chrome developer tools (debugging and responsiveness testing -including all devices available) | Passed
+Samsung A50 |  
+Iphone 7 |  
+Iphone X | 
+Friends & Family Testing |  
+Responsive Design|  
+
+
+Browser Test | Outcome
+------------ | -------------
+ Chrome | Passed
+ Edge/IE | Passed
+ Firefox | Passed
+ Opera | Passed
+ Safari | Passed
+
+
+ On Screen Tests | Outcome
+------------ | -------------
+ Main screen | Passed
+

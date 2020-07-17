@@ -68,7 +68,7 @@ def getslang ():
         filter = {}
     else:
         filter = {'category_name': { '$eq': category }} 
-    return render_template("slangs.html", slangs=mongo.db.slangs.find(filter).sort("slang_name"), categories=mongo.db.categories.find())
+    return render_template("slangs.html", slangs=mongo.db.slangs.find(filter).sort("slang_name"), categories=mongo.db.categories.find(),  selectedCategory=category)
 
 @app.route('/addslang')
 def add_slang():
