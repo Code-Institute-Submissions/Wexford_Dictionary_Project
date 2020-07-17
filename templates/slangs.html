@@ -2,14 +2,7 @@
 {% block content %}
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+
    <div class="container filters">   
     <div class="input-field col s6">
         <i class="material-icons prefix">search</i>
@@ -25,7 +18,7 @@
 
 
 <span>
-<a href="{{url_for('getslang')}}" class="btn waves-effect waves-light purple" ><i class="material-icons right">refresh</i>Refresh</a>
+<a href="{{url_for('getslang')}}" class="btn waves-effect waves-light purple" ><i class="material-icons right">refresh</i>Refresh List</a>
 </span>
 
 <ul class="collapsible">
@@ -59,7 +52,6 @@
     });
 </script>
 
-</body>
 {% endblock %}
-</html>
+
 
