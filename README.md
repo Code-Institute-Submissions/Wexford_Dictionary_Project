@@ -4,6 +4,21 @@
 
 Application Demo [Wexford Slang Dictionary](https://wexforddictionaryproject.herokuapp.com/)
 
+## Table Of Contents
+1. [Description](#Description)
+2. [UX](#UX)
+3. [UserStories](#UserStories)
+4. [Wireframes](#Wireframes)
+5. [Features](#Features)
+6. [FutureFeatures](#FutureFeatures)
+7. [Pages](#Pages)
+8. [Testing](#Testing)
+9. [Deployment](#Deployment)
+10. [Technologies](#Technologies)
+11. [ViewProject](#ViewProject)
+12. [Acknowledgements](#Acknowledgements)
+13. [Disclaimer](#Disclaimer)
+
 
 ## Description
 
